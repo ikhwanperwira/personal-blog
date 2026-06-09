@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>Latest posts</h1>
+    <p>Published automatically from Git.</p>
+  </section>
+  <section class="post-list">
+    {{ range site.RegularPages.ByDate.Reverse }}
+      <article class="post-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <p>{{ .Summary }}</p>
+      </article>
+    {{ else }}
+      <p>No posts published yet.</p>
+    {{ end }}
+  </section>
+{{ end }}

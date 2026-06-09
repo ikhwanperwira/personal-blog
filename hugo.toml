@@ -1,0 +1,6 @@
+baseURL = "https://blog.mip.my.id/"
+languageCode = "en-us"
+title = "personal-blog"
+
+[params]
+  description = "A Hugo blog published from Git."
